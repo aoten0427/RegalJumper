@@ -1,0 +1,11 @@
+#pragma once
+#include"Base/CommonResources.h"
+#include"DeviceResources.h"
+#include"Base/Scene/Scene.h"
+#include"Base/Input/DirectXInputs.h"
+#include"Base/Component/Transform/Transform.h"
+#include"Base/Component/Render/Model3D.h"
+#include"Base/Component/Render/PrimitiveRenderer.h"
+#include"Base/Component/Collider/Collider.h"
+#include"Base/Component/Rigidbody/Rigidbody.h"
+#include"Base/Camera/Camera.h"
