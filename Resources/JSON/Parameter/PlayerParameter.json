@@ -1,0 +1,27 @@
+
+{
+    "MASS":30,"//":"体重",
+    "COLLIDER_SIZE":{
+        "x":6,
+        "y":3.7,
+        "z":6.6
+    },"//":"判定の大きさ",
+    "INITIAL_POSITION":{
+        "x":0,
+        "y":1.85,
+        "z":0
+    },"//":"初期位置",
+    "GRAVITY_GROUND":-9.8,"//":"地上重力",
+    "GRAVITY_AIR":-90,"//":"空中重力",
+    "GRAVITY_THREAD":-2.0,"//":"糸重力",
+    "SPEED_GROUND":140,"//":"地上移動速度",
+    "SPEED_AIR":20,"//":"空中移動速度",
+    "SPEED_THREAD":12,"//":"糸移動速度",
+    "FRECTION_GROUND":-0.08,"//":"地上摩擦",
+    "FRECTION_AIR":-0.01,"//":"空中摩擦",
+    "FRECTION_THREAD":-0.005,"//":"糸空中摩擦",
+    "JUMP_POWER":65,"//":"ジャンプ力",
+    "RESET_HEIGHT":-200,"//":"リセットされる高度",
+    "SEAECH_RANGE":150,"//":"サーチ範囲",
+    "SEAECH_VISION":0.97,"//":"サーチ視覚"
+}

@@ -1,0 +1,12 @@
+
+{
+   "INITIAL_POWER":50,"//":"糸の初期に与える力",
+   "INITIAL_POWER_TIP":1000,"//":"発射時に糸の先端に与える力",
+   "EXTEND_SPEED":6.0,"//":"糸を伸ばすスピード",
+   "DELETE_TIME":1.0,"//":"糸が消える時間",
+   "ADD_POWER":300,"//":"発射中に与える力",
+   "SHRINK_VALUE_BEGIN":2.6,"//":"縮むスピードの初期値",
+   "SHRINK_VALUE_END":1.5,"//":"縮むスピードの最終値",
+   "SHRINK_SPEED":1.0,"//":"スピードが変化する早さ",
+   "SHRINK_EASING":"InQuint","//":"変化時のイージング"
+}
