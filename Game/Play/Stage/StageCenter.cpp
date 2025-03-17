@@ -16,13 +16,16 @@
 #include"Game/Play/Stage/TargetBox.h"
 #include"Game/Play/Stage/Goal.h"
 #include"Game/Play/Stage/Help.h"
+#include"Game/Play/Player/PlayerCenter.h"
+#include"Game/Play/Player/Player.h"
 
 /// <summary>
 /// コンストラクタ
 /// </summary>
 /// <param name="scene">所属シーン</param>
-StageCenter::StageCenter(Scene* scene):Object(scene)
+StageCenter::StageCenter(Scene* scene, PlayerCenter* playercenter):Object(scene)
 {
+	m_playerCenter = playercenter;
 	scene->AddObject<Skydome>(scene);
 	LoadData();
 }
@@ -62,7 +65,7 @@ void StageCenter::LoadData()
 			//box生成
 			if (m_json["StageObject"][i]["TYPE"] == "Box")
 			{
-				auto box = GetScene()->AddObject<Box>(GetScene());
+				auto box = GetScene()->AddObject<Box>(GetScene(),m_playerCenter->GetPlayer());
 				box->GetTransform()->SetPosition(position);
 				box->GetTransform()->SetScale(scale);
 			}

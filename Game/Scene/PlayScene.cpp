@@ -23,9 +23,9 @@ PlayScene::PlayScene(CommonResources* resources) :Scene(resources,"Play")
 	//管理者生成
 	AddObject<PlayCenter>(this);
 	//プレイヤー生成
-	AddObject<PlayerCenter>(this);
+	PlayerCenter* playercenter = AddObject<PlayerCenter>(this);
 	//ステージ生成
-	AddObject<StageCenter>(this);
+	AddObject<StageCenter>(this,playercenter);
 
 	//カーソルをオフにする
 	GameManager::GetInstance()->ViewCursor(false);

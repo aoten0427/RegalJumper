@@ -6,13 +6,15 @@
 
 #pragma once
 #include"Base/Object/Object.h"
+class PlayerCenter;
 
 class StageCenter :public Object
 {
 private:
+	PlayerCenter* m_playerCenter;
 public:
 	//コンストラクタ
-	StageCenter(Scene* scene);
+	StageCenter(Scene* scene,PlayerCenter* playercenter);
 	//デストラクタ
 	~StageCenter()override = default;
 private:

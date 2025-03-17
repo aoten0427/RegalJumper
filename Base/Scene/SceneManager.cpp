@@ -46,7 +46,7 @@ void SceneManager::Initialize(CommonResources* resources)
 	m_commonResources = resources;
 	m_unbreakableManager = UnbreakableManager::GetInstance();
 
-	ChangeScene(Scene::SceneID::TITLE);
+	ChangeScene(Scene::SceneID::PLAY);
 }
 
 /// <summary>

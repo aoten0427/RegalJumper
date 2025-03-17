@@ -54,11 +54,15 @@ float4 main(PS_INPUT input) : SV_TARGET
     float2 offset = input.WorldPosition.xz - PlayerPosition.xz;
     float distSquared = dot(offset, offset);
     
-    float mask1 = step(4.0, distSquared); //”ÍˆÍ”»’è
-    float mask2 = step(input.Normal.y > 0.0001f,0);//ã•ûŒü”»’è
+    float mask1 = step(10.0, distSquared); //”ÍˆÍ”»’è
+    float mask2 = step(input.Normal.y > 0.0001f, 0); //ã•ûŒü”»’è
     float mask3 = step(PlayerPosition.y, input.WorldPosition.y);//ã‰º”»’è
 
     float mask = max(max(mask1, mask2),mask3); // ‚Ç‚¿‚ç‚©‚ª1‚È‚ç”’i1j
     
-    return lerp(float4(0.2, 0.2, 0.5, 1), float4(0.1, 0.1, 0.1, 1), mask);
+    float4 color = tex.Sample(samLinear, input.Tex);
+   
+    float4 shadow = color + float4(0.2, 0.2, 0.5, 1);
+    
+    return lerp(shadow, color, mask);
 }

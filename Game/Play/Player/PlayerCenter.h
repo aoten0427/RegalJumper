@@ -13,6 +13,8 @@ class Search;
 
 class PlayerCenter:public Object
 {
+public:
+	Player* GetPlayer() { return m_player; }
 private:
 	//ƒvƒŒƒCƒ„[
 	Player* m_player;
